@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Website Plan — Your Care Crew</title>
+  <style>
+    /* ── Google Fonts ── */
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+    /* ── Design Tokens ── */
+    :root {
+      --navy:       #1B2B4B;
+      --navy-light: #253A62;
+      --gold:       #C9973A;
+      --gold-light: #E8BF75;
+      --cream:      #F8F5EF;
+      --white:      #FFFFFF;
+      --charcoal:   #2D2D2D;
+      --grey:       #6B7280;
+      --border:     #E3DDD3;
+      --tag-bg:     #EEF2FF;
+      --tag-text:   #3B4EA6;
+      --green:      #2E7D5E;
+      --green-bg:   #EAF4F0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--charcoal);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* ── COVER ── */
+    .cover {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #2E4A7A 100%);
+      color: var(--white);
+      padding: 80px 60px 70px;
+      position: relative;
+      overflow: hidden;
+    }
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 360px; height: 360px;
+      background: radial-gradient(circle, rgba(201,151,58,0.18) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .cover::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: -60px;
+      width: 280px; height: 280px;
+      background: radial-gradient(circle, rgba(201,151,58,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .cover-tag {
+      display: inline-block;
+      background: rgba(201,151,58,0.25);
+      color: var(--gold-light);
+      border: 1px solid rgba(201,151,58,0.4);
+      border-radius: 20px;
+      padding: 4px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .cover h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .cover h1 span { color: var(--gold-light); }
+    .cover-sub {
+      font-size: 17px;
+      color: rgba(255,255,255,0.72);
+      max-width: 560px;
+      margin-bottom: 36px;
+    }
+    .cover-meta {
+      display: flex; gap: 32px; flex-wrap: wrap;
+    }
+    .meta-item { display: flex; flex-direction: column; }
+    .meta-label { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 1px; text-transform: uppercase; }
+    .meta-value { font-size: 14px; font-weight: 600; color: var(--gold-light); }
+
+    /* ── LAYOUT ── */
+    .container { max-width: 960px; margin: 0 auto; padding: 0 40px; }
+    .section { padding: 56px 0 40px; border-bottom: 1px solid var(--border); }
+    .section:last-child { border-bottom: none; }
+
+    /* ── SECTION HEADER ── */
+    .section-label {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 10px;
+    }
+    .section-label::after {
+      content: ''; flex: 1; height: 1px; background: var(--gold-light); opacity: 0.4;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+    h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 8px;
+      margin-top: 24px;
+    }
+    p { color: var(--charcoal); margin-bottom: 12px; }
+
+    /* ── COLOR PALETTE ── */
+    .palette { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
+    .swatch {
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+    }
+    .swatch-circle {
+      width: 72px; height: 72px; border-radius: 50%;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    }
+    .swatch-name { font-size: 12px; font-weight: 600; color: var(--navy); }
+    .swatch-hex  { font-size: 11px; color: var(--grey); font-family: monospace; }
+
+    /* ── TYPOGRAPHY PREVIEW ── */
+    .type-preview {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin: 20px 0;
+    }
+    .type-row { margin-bottom: 18px; display: flex; align-items: baseline; gap: 20px; }
+    .type-row:last-child { margin-bottom: 0; }
+    .type-label { font-size: 11px; color: var(--grey); min-width: 110px; letter-spacing: 0.5px; }
+    .type-heading { font-family: 'Playfair Display', serif; font-size: 28px; color: var(--navy); font-weight: 700; }
+    .type-subheading { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--navy); font-weight: 600; }
+    .type-body { font-family: 'Inter', sans-serif; font-size: 15px; color: var(--charcoal); }
+    .type-caption { font-family: 'Inter', sans-serif; font-size: 12px; color: var(--grey); }
+
+    /* ── SITE MAP ── */
+    .sitemap { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
+    .page-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      transition: box-shadow 0.2s;
+    }
+    .page-card:hover { box-shadow: 0 6px 20px rgba(27,43,75,0.10); }
+    .page-icon {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; margin-bottom: 12px;
+    }
+    .page-name { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+    .page-desc { font-size: 12px; color: var(--grey); line-height: 1.5; }
+
+    /* ── FEATURES TABLE ── */
+    .feature-list { display: flex; flex-direction: column; gap: 14px; margin: 20px 0; }
+    .feature-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px;
+      display: flex; align-items: flex-start; gap: 14px;
+    }
+    .feature-num {
+      min-width: 28px; height: 28px; border-radius: 50%;
+      background: var(--navy);
+      color: var(--white); font-size: 12px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .feature-body h4 { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+    .feature-body p  { font-size: 13px; color: var(--grey); margin: 0; line-height: 1.5; }
+
+    /* ── FORM SPEC ── */
+    .form-spec {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 20px 0;
+    }
+    .form-spec-head {
+      background: var(--navy);
+      color: var(--white);
+      padding: 14px 20px;
+      font-size: 13px; font-weight: 600;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .form-spec-body { padding: 20px; }
+    .field-row {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 13px;
+    }
+    .field-row:last-child { border-bottom: none; }
+    .field-name { min-width: 190px; font-weight: 600; color: var(--navy); }
+    .field-type { min-width: 100px; color: var(--grey); font-family: monospace; font-size: 12px; }
+    .field-note { color: var(--charcoal); }
+    .badge {
+      display: inline-block; padding: 2px 8px; border-radius: 10px;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.5px;
+    }
+    .badge-req  { background: #FEF3C7; color: #92400E; }
+    .badge-opt  { background: #F0FDF4; color: #166534; }
+    .badge-file { background: #EFF6FF; color: #1D4ED8; }
+
+    /* ── PORTFOLIO FLOW ── */
+    .flow-steps {
+      display: flex; align-items: flex-start; gap: 0;
+      margin: 24px 0; flex-wrap: wrap;
+    }
+    .flow-step {
+      flex: 1; min-width: 140px;
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center; padding: 0 12px; position: relative;
+    }
+    .flow-step:not(:last-child)::after {
+      content: '→';
+      position: absolute; right: -10px; top: 22px;
+      font-size: 18px; color: var(--gold); font-weight: 700;
+    }
+    .step-bubble {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: var(--white); font-size: 18px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 10px;
+    }
+    .step-title { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+    .step-desc  { font-size: 12px; color: var(--grey); line-height: 1.4; }
+
+    /* ── TECH STACK ── */
+    .tech-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin: 20px 0; }
+    .tech-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px;
+    }
+    .tech-layer { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); font-weight: 700; margin-bottom: 4px; }
+    .tech-name  { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .tech-why   { font-size: 12px; color: var(--grey); line-height: 1.4; }
+
+    /* ── DEPLOYMENT ── */
+    .deploy-steps { display: flex; flex-direction: column; gap: 0; margin: 20px 0; }
+    .deploy-step {
+      display: flex; gap: 20px; padding-bottom: 24px; position: relative;
+    }
+    .deploy-step:not(:last-child)::before {
+      content: '';
+      position: absolute; left: 19px; top: 44px; bottom: 0;
+      width: 2px; background: var(--border);
+    }
+    .deploy-num {
+      min-width: 40px; height: 40px; border-radius: 50%;
+      background: var(--gold);
+      color: var(--white); font-size: 15px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .deploy-content h4 { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 4px; padding-top: 8px; }
+    .deploy-content p  { font-size: 13px; color: var(--grey); margin: 0; }
+    .code-block {
+      background: #1E2A40;
+      color: #A8D8A8;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-top: 8px;
+      line-height: 1.6;
+    }
+
+    /* ── TIMELINE ── */
+    .timeline { display: flex; flex-direction: column; gap: 0; margin: 20px 0; }
+    .phase {
+      display: flex; gap: 20px; padding-bottom: 24px; position: relative;
+    }
+    .phase:not(:last-child)::before {
+      content: '';
+      position: absolute; left: 19px; top: 44px; bottom: 0;
+      width: 2px; background: var(--border);
+    }
+    .phase-dot {
+      min-width: 40px; height: 40px; border-radius: 50%;
+      border: 3px solid var(--navy);
+      background: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700; color: var(--navy);
+      flex-shrink: 0;
+    }
+    .phase-body { padding-top: 8px; }
+    .phase-tag {
+      display: inline-block;
+      background: var(--tag-bg); color: var(--tag-text);
+      padding: 2px 10px; border-radius: 10px;
+      font-size: 11px; font-weight: 600; margin-bottom: 6px;
+    }
+    .phase-body h4 { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+    .phase-body p  { font-size: 13px; color: var(--grey); margin: 0; }
+
+    /* ── CALLOUT ── */
+    .callout {
+      background: var(--green-bg);
+      border: 1px solid rgba(46,125,94,0.25);
+      border-left: 4px solid var(--green);
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 13px; color: var(--charcoal);
+    }
+    .callout strong { color: var(--green); }
+
+    /* ── FOOTER ── */
+    .plan-footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.6);
+      text-align: center;
+      padding: 32px 40px;
+      font-size: 13px;
+      margin-top: 20px;
+    }
+    .plan-footer strong { color: var(--gold-light); }
+
+    @media print {
+      .cover { padding: 40px; }
+      .cover h1 { font-size: 38px; }
+      .section { padding: 36px 0 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════ COVER ══════════ -->
+<div class="cover">
+  <div class="container">
+    <div class="cover-tag">Project Plan · v1.0</div>
+    <h1>Your Care Crew<br/><span>Website Plan</span></h1>
+    <p class="cover-sub">
+      A professional platform <strong style="color:var(--gold-light)">specializing in nanny placement</strong> —
+      also connecting house helpers and elder-care providers with families across the country.
+      Deployable on GitHub Pages.
+    </p>
+    <div class="cover-meta">
+      <div class="meta-item">
+        <span class="meta-label">Date</span>
+        <span class="meta-value">May 2026</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Deployment</span>
+        <span class="meta-value">GitHub Pages</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Stack</span>
+        <span class="meta-value">HTML · CSS · JS (Static)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Author</span>
+        <span class="meta-value">Synapse Lab</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 1. BRAND & VISUAL IDENTITY ══════════ -->
+<div class="container">
+<section class="section">
+  <div class="section-label">01 — Brand &amp; Visual Identity</div>
+  <h2>Color Theme &amp; Typography</h2>
+  <p>
+    The visual identity is built around <strong>trust, warmth, and premium quality</strong> —
+    core feelings that families must have when inviting a nanny or caregiver into their home.
+    As a <strong>nanny-first service</strong>, the design should feel nurturing yet professional:
+    deep navy anchors authority; gold conveys care and value; an off-white cream gives a warm,
+    approachable backdrop that appeals directly to parents.
+  </p>
+
+  <h3>Color Palette</h3>
+  <div class="palette">
+    <div class="swatch">
+      <div class="swatch-circle" style="background:#1B2B4B;"></div>
+      <div class="swatch-name">Deep Navy</div>
+      <div class="swatch-hex">#1B2B4B</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-circle" style="background:#253A62;"></div>
+      <div class="swatch-name">Navy Mid</div>
+      <div class="swatch-hex">#253A62</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-circle" style="background:#C9973A;"></div>
+      <div class="swatch-name">Warm Gold</div>
+      <div class="swatch-hex">#C9973A</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-circle" style="background:#E8BF75;"></div>
+      <div class="swatch-name">Gold Light</div>
+      <div class="swatch-hex">#E8BF75</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-circle" style="background:#F8F5EF; border:1px solid #ddd;"></div>
+      <div class="swatch-name">Cream BG</div>
+      <div class="swatch-hex">#F8F5EF</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-circle" style="background:#2E7D5E;"></div>
+      <div class="swatch-name">Trust Green</div>
+      <div class="swatch-hex">#2E7D5E</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-circle" style="background:#2D2D2D;"></div>
+      <div class="swatch-name">Charcoal</div>
+      <div class="swatch-hex">#2D2D2D</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-circle" style="background:#6B7280;"></div>
+      <div class="swatch-name">Muted Grey</div>
+      <div class="swatch-hex">#6B7280</div>
+    </div>
+  </div>
+
+  <h3>Typography</h3>
+  <div class="type-preview">
+    <div class="type-row">
+      <span class="type-label">Page Headings</span>
+      <span class="type-heading">Playfair Display · 700</span>
+    </div>
+    <div class="type-row">
+      <span class="type-label">Section Titles</span>
+      <span class="type-subheading">Playfair Display · 600</span>
+    </div>
+    <div class="type-row">
+      <span class="type-label">Body / UI</span>
+      <span class="type-body">Inter · 400 / 500 / 600</span>
+    </div>
+    <div class="type-row">
+      <span class="type-label">Captions / Labels</span>
+      <span class="type-caption">Inter · 300 — uppercase, letter-spaced</span>
+    </div>
+  </div>
+
+  <h3>Design Principles</h3>
+  <p>
+    <strong>Clean &amp; Spacious</strong> — generous white-space, grid-based layouts, and clear visual hierarchy so visitors find information effortlessly.<br/>
+    <strong>Trust Signals Everywhere</strong> — verification badges, review stars, admin-approved portfolio cards, and a professional tone across all copy.<br/>
+    <strong>Mobile-First</strong> — fully responsive from 320 px upward; all forms and cards collapse gracefully on small screens.
+  </p>
+</section>
+
+<!-- ══════════ 2. SITE MAP ══════════ -->
+<section class="section">
+  <div class="section-label">02 — Site Architecture</div>
+  <h2>Pages &amp; Navigation</h2>
+  <p>
+    The site is organized into six primary pages, all statically built for zero-cost hosting
+    on GitHub Pages. Navigation is a fixed top bar with the brand logo on the left and
+    links + a "Find a Nanny" CTA button on the right — the primary call-to-action always
+    leading with nanny services.
+  </p>
+  <div class="sitemap">
+    <div class="page-card">
+      <div class="page-icon">🏠</div>
+      <div class="page-name">Home</div>
+      <div class="page-desc">Hero headline leads with nanny placement. Service categories (Nanny as primary, + House Helper &amp; Elder Care), "Find a Nanny" &amp; "Join as a Nanny" CTAs, trust counters, and featured testimonials preview.</div>
+    </div>
+    <div class="page-card">
+      <div class="page-icon">⭐</div>
+      <div class="page-name">Portfolio &amp; Testimonials</div>
+      <div class="page-desc">Admin-curated cards filterable by all 8 service types. <strong>Nanny Service tab is the default/selected view.</strong> First name, photo, age/experience shown. Client testimonials prominently feature nanny placements.</div>
+    </div>
+    <div class="page-card">
+      <div class="page-icon">📋</div>
+      <div class="page-name">For Clients</div>
+      <div class="page-desc">Explains the nanny hiring process first, then other services. Covers safety checks, background screening, and includes the Client Contact Form. Nanny-specific FAQs highlighted.</div>
+    </div>
+    <div class="page-card">
+      <div class="page-icon">💼</div>
+      <div class="page-name">Join as a Pro</div>
+      <div class="page-desc">Registration form for nannies and other care professionals. Nanny is the default-selected service type. Includes personal info, experience, portfolio photo, and Photo ID upload.</div>
+    </div>
+    <div class="page-card">
+      <div class="page-icon">ℹ️</div>
+      <div class="page-name">About Us</div>
+      <div class="page-desc">Company story, mission, values, the team, and why Your Care Crew is the trusted choice for families.</div>
+    </div>
+    <div class="page-card">
+      <div class="page-icon">📞</div>
+      <div class="page-name">Contact Us</div>
+      <div class="page-desc">General enquiry form, office address, phone/email, embedded Google Map, and social media links.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 3. FEATURES ══════════ -->
+<section class="section">
+  <div class="section-label">03 — Key Features</div>
+  <h2>Core Functionality</h2>
+  <div class="callout" style="border-left-color:var(--gold);background:#FDF8EE;border-color:rgba(201,151,58,0.3);">
+    <strong style="color:var(--gold);">⭐ Our Core Specialization:</strong> This website is primarily a <strong>nanny placement service</strong>. All homepage copy, hero imagery, SEO meta tags, and primary CTAs must lead with nanny services. The 7 other service types are valuable offerings but should never overshadow the nanny brand identity.
+  </div>
+
+  <h3>Full Service Menu (8 Categories)</h3>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin:16px 0 24px;">
+    <div style="background:var(--navy);color:var(--white);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:10px;">
+      <span style="font-size:20px;">👶</span>
+      <div><div style="font-size:11px;color:var(--gold-light);font-weight:700;letter-spacing:1px;">PRIMARY</div><div style="font-size:14px;font-weight:600;">Nanny Service</div></div>
+    </div>
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:10px;">
+      <span style="font-size:20px;">🍼</span><div style="font-size:14px;font-weight:600;color:var(--navy);">Baby Sitter Service</div>
+    </div>
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:10px;">
+      <span style="font-size:20px;">🌸</span><div style="font-size:14px;font-weight:600;color:var(--navy);">Baby Care</div>
+    </div>
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:10px;">
+      <span style="font-size:20px;">🤱</span><div style="font-size:14px;font-weight:600;color:var(--navy);">Japa Maid</div>
+    </div>
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:10px;">
+      <span style="font-size:20px;">👩</span><div style="font-size:14px;font-weight:600;color:var(--navy);">Female Attendant</div>
+    </div>
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:10px;">
+      <span style="font-size:20px;">👨</span><div style="font-size:14px;font-weight:600;color:var(--navy);">Male Attendant</div>
+    </div>
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:10px;">
+      <span style="font-size:20px;">🏥</span><div style="font-size:14px;font-weight:600;color:var(--navy);">Nurse</div>
+    </div>
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:10px;">
+      <span style="font-size:20px;">🧓</span><div style="font-size:14px;font-weight:600;color:var(--navy);">Elder Care</div>
+    </div>
+  </div>
+
+  <div class="feature-list">
+    <div class="feature-item">
+      <div class="feature-num">1</div>
+      <div class="feature-body">
+        <h4>Nanny-First Service Categories</h4>
+        <p><strong>Nanny Service is the primary and featured category</strong> — displayed with a dedicated hero card, richer description, and a "Most Popular" badge. The full service menu offers 8 options: <strong>Nanny Service</strong>, Baby Sitter Service, Baby Care, Japa Maid, Female Attendant, Male Attendant, Nurse, and Elder Care. The homepage groups these visually with Nanny-related services first.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">2</div>
+      <div class="feature-body">
+        <h4>Client Contact Form</h4>
+        <p>Full-name, email, phone, service type, preferred start date, message. Submitted via Formspree (free tier) — no backend required for GitHub Pages.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">3</div>
+      <div class="feature-body">
+        <h4>Service Provider Application Form</h4>
+        <p>Full registration form with portfolio photo upload and Photo ID upload fields. Files handled via Formspree's file-upload feature or a linked Google Form.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">4</div>
+      <div class="feature-body">
+        <h4>Admin-Approved Portfolio Cards</h4>
+        <p>Each portfolio card shows only: first name, approved profile photo, service category, age or years of experience. No card appears until the admin manually adds it to the HTML/JSON data file.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">5</div>
+      <div class="feature-body">
+        <h4>Testimonials Section</h4>
+        <p>Rotating carousel of client testimonials with star ratings, client first name, and city. Admin-curated, sourced from real client feedback.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">6</div>
+      <div class="feature-body">
+        <h4>Smooth Animations &amp; Scroll Effects</h4>
+        <p>Fade-in cards on scroll (Intersection Observer API), smooth scroll navigation, and subtle hover states — no heavy frameworks needed.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">7</div>
+      <div class="feature-body">
+        <h4>Fully Mobile-Responsive Layout</h4>
+        <p><strong>Mobile-first CSS</strong> — every page is designed for phones first, then scaled up. Hamburger nav, stacked card grids, full-width forms, and touch-friendly tap targets (min 48×48 px) on all buttons and links. No horizontal scrolling on any screen size.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">8</div>
+      <div class="feature-body">
+        <h4>SEO Built In from Day One</h4>
+        <p>Every page ships with complete meta tags, Open Graph, Twitter Card, canonical URLs, semantic HTML5 landmarks, structured data (JSON-LD for LocalBusiness), a <code>sitemap.xml</code>, and a <code>robots.txt</code> — present in the <strong>very first deployment</strong>, not added later.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">9</div>
+      <div class="feature-body">
+        <h4>Trust &amp; Safety Indicators</h4>
+        <p>"ID Verified", "Background Checked", and "Admin Approved" badge icons on portfolio cards to reinforce safety for families.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 4. FORMS SPECIFICATION ══════════ -->
+<section class="section">
+  <div class="section-label">04 — Forms Specification</div>
+  <h2>Form Fields &amp; Data</h2>
+
+  <h3>A. Client Contact Form <small style="color:var(--grey);font-size:13px;font-weight:400;">(contact.html)</small></h3>
+  <div class="form-spec">
+    <div class="form-spec-head">📧 Client Enquiry Form</div>
+    <div class="form-spec-body">
+      <div class="field-row"><span class="field-name">Full Name</span><span class="field-type">text</span><span class="field-note"><span class="badge badge-req">Required</span></span></div>
+      <div class="field-row"><span class="field-name">Email Address</span><span class="field-type">email</span><span class="field-note"><span class="badge badge-req">Required</span></span></div>
+      <div class="field-row"><span class="field-name">Phone Number</span><span class="field-type">tel</span><span class="field-note"><span class="badge badge-req">Required</span></span></div>
+      <div class="field-row"><span class="field-name">Service Needed</span><span class="field-type">select</span><span class="field-note"><span class="badge badge-req">Required</span> — <strong>Nanny Service</strong> (default) / Baby Sitter Service / Baby Care / Japa Maid / Female Attendant / Male Attendant / Nurse / Elder Care</span></div>
+      <div class="field-row"><span class="field-name">Preferred Start Date</span><span class="field-type">date</span><span class="field-note"><span class="badge badge-opt">Optional</span></span></div>
+      <div class="field-row"><span class="field-name">Location / City</span><span class="field-type">text</span><span class="field-note"><span class="badge badge-req">Required</span></span></div>
+      <div class="field-row"><span class="field-name">Additional Message</span><span class="field-type">textarea</span><span class="field-note"><span class="badge badge-opt">Optional</span> — max 500 chars</span></div>
+    </div>
+  </div>
+
+  <h3>B. Service Provider Registration Form <small style="color:var(--grey);font-size:13px;font-weight:400;">(join.html)</small></h3>
+  <div class="form-spec">
+    <div class="form-spec-head">💼 Professional Application Form</div>
+    <div class="form-spec-body">
+      <div class="field-row"><span class="field-name">First Name</span><span class="field-type">text</span><span class="field-note"><span class="badge badge-req">Required</span></span></div>
+      <div class="field-row"><span class="field-name">Last Name</span><span class="field-type">text</span><span class="field-note"><span class="badge badge-req">Required</span> — kept private</span></div>
+      <div class="field-row"><span class="field-name">Date of Birth / Age</span><span class="field-type">date</span><span class="field-note"><span class="badge badge-req">Required</span></span></div>
+      <div class="field-row"><span class="field-name">Email Address</span><span class="field-type">email</span><span class="field-note"><span class="badge badge-req">Required</span></span></div>
+      <div class="field-row"><span class="field-name">Phone Number</span><span class="field-type">tel</span><span class="field-note"><span class="badge badge-req">Required</span></span></div>
+      <div class="field-row"><span class="field-name">Service Category</span><span class="field-type">select</span><span class="field-note"><span class="badge badge-req">Required</span> — <strong>Nanny Service</strong> (default) / Baby Sitter Service / Baby Care / Japa Maid / Female Attendant / Male Attendant / Nurse / Elder Care</span></div>
+      <div class="field-row"><span class="field-name">Years of Experience</span><span class="field-type">number</span><span class="field-note"><span class="badge badge-req">Required</span></span></div>
+      <div class="field-row"><span class="field-name">Location / City</span><span class="field-type">text</span><span class="field-note"><span class="badge badge-req">Required</span></span></div>
+      <div class="field-row"><span class="field-name">Short Bio</span><span class="field-type">textarea</span><span class="field-note"><span class="badge badge-req">Required</span> — max 300 chars</span></div>
+      <div class="field-row"><span class="field-name">Portfolio Photo</span><span class="field-type">file</span><span class="field-note"><span class="badge badge-file">Upload</span> <span class="badge badge-req">Required</span> — JPG/PNG, max 5 MB</span></div>
+      <div class="field-row"><span class="field-name">Photo ID (Government)</span><span class="field-type">file</span><span class="field-note"><span class="badge badge-file">Upload</span> <span class="badge badge-req">Required</span> — JPG/PNG/PDF, max 10 MB — stored securely, never displayed publicly</span></div>
+      <div class="field-row"><span class="field-name">Privacy Consent</span><span class="field-type">checkbox</span><span class="field-note"><span class="badge badge-req">Required</span> — data handling agreement</span></div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>⚙️ Form Backend (GitHub Pages compatible):</strong> Forms submit to <strong>Formspree.io</strong> (free tier supports file uploads and email notifications) — no server code needed. Alternatively, a Google Form embed can be used for the provider registration to handle file storage via Google Drive.
+  </div>
+</section>
+
+<!-- ══════════ 5. MOBILE RESPONSIVENESS ══════════ -->
+<section class="section">
+  <div class="section-label">05 — Mobile Responsiveness</div>
+  <h2>Mobile-First Design &amp; Breakpoints</h2>
+  <p>
+    A large share of parents searching for nanny services do so on their phones.
+    The site <strong>must look and work perfectly on all screen sizes</strong> — every layout,
+    form, and portfolio card is designed mobile-first and enhanced for larger screens.
+  </p>
+
+  <div class="callout" style="border-left-color:var(--navy);background:#EEF2FF;border-color:rgba(59,78,166,0.2);">
+    <strong style="color:var(--navy);">📱 Mobile-First Rule:</strong> All CSS is written for mobile (320 px+) first. Tablet and desktop styles are added using <code>min-width</code> media queries — never <code>max-width</code> overrides.
+  </div>
+
+  <h3>Breakpoints</h3>
+  <div class="feature-list">
+    <div class="feature-item">
+      <div class="feature-num" style="background:var(--gold);min-width:52px;font-size:10px;font-weight:700;">320px</div>
+      <div class="feature-body">
+        <h4>Small Mobile (base styles)</h4>
+        <p>Single-column layout everywhere. Full-width cards, forms, and buttons. Navigation collapses to a hamburger menu. Hero text at 28px. Portfolio cards stack vertically one per row.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num" style="background:var(--gold);min-width:52px;font-size:10px;font-weight:700;">640px</div>
+      <div class="feature-body">
+        <h4>Large Mobile / Phablet</h4>
+        <p>Portfolio cards move to a 2-column grid. Form fields can sit side-by-side (e.g. first name + last name). Testimonials show 1 card at a time in the carousel.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num" style="background:var(--navy-light);min-width:52px;font-size:10px;font-weight:700;">768px</div>
+      <div class="feature-body">
+        <h4>Tablet</h4>
+        <p>Navigation expands to a full horizontal bar. Service category cards display in a 3-column row. Portfolio grid moves to 3 columns. Hero gains a side image layout.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num" style="background:var(--navy);min-width:52px;font-size:10px;font-weight:700;">1024px</div>
+      <div class="feature-body">
+        <h4>Desktop</h4>
+        <p>Full layout with max-width container (960–1100 px centered). Portfolio grid 4 columns. Testimonials show 2–3 cards side by side. Forms have a two-column field layout.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3>Mobile-Specific UI Rules</h3>
+  <div class="feature-list" style="gap:10px;">
+    <div class="feature-item">
+      <div class="feature-num">✓</div>
+      <div class="feature-body">
+        <h4>Touch Targets</h4>
+        <p>All buttons, links, and form inputs are minimum <strong>48×48 px</strong> to meet WCAG accessibility and mobile usability standards. No tiny tap targets anywhere.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">✓</div>
+      <div class="feature-body">
+        <h4>No Horizontal Scroll</h4>
+        <p><code>overflow-x: hidden</code> on <code>body</code>, and all grids/flex containers use <code>flex-wrap: wrap</code> or responsive <code>grid-template-columns</code> so nothing ever bleeds off-screen.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">✓</div>
+      <div class="feature-body">
+        <h4>Readable Font Sizes</h4>
+        <p>Body text minimum <strong>15px</strong> on mobile. Input fields set to <strong>16px</strong> minimum to prevent iOS Safari from auto-zooming on focus.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">✓</div>
+      <div class="feature-body">
+        <h4>Fast Load on Mobile</h4>
+        <p>Images use <code>loading="lazy"</code> and are served in WebP format. No heavy JS frameworks. CSS and JS files are minified before deployment. Target: &lt;3s load on 4G.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">✓</div>
+      <div class="feature-body">
+        <h4>File Upload on Mobile</h4>
+        <p>Portfolio photo and Photo ID upload fields use <code>accept="image/*"</code> and <code>capture</code> attribute — allowing users to take a photo directly from their phone camera without needing a file browser.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">✓</div>
+      <div class="feature-body">
+        <h4>Sticky "Find a Nanny" Button</h4>
+        <p>On mobile, a fixed sticky CTA button floats at the bottom of the screen on key pages (Home, For Clients) so the primary action is always reachable with a thumb.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 6. SEO STRATEGY ══════════ -->
+<section class="section">
+  <div class="section-label">06 — SEO Strategy</div>
+  <h2>SEO from the First Deployment</h2>
+  <p>
+    SEO is <strong>not an afterthought</strong> — it is baked into the HTML foundation before the first
+    <code>git push</code>. Every page is fully crawlable, correctly tagged, and structured for
+    Google from launch day. This gives the site a head-start on organic nanny-service search rankings.
+  </p>
+
+  <div class="callout" style="border-left-color:#E53E3E;background:#FFF5F5;border-color:rgba(229,62,62,0.2);">
+    <strong style="color:#C53030;">🚨 Must-Have on First Deploy:</strong> All items in the "Day-One SEO Checklist" below must be present in the initial GitHub Pages deployment — no exceptions.
+  </div>
+
+  <h3>Day-One SEO Checklist — Every Page</h3>
+  <div class="feature-list" style="gap:10px;">
+    <div class="feature-item">
+      <div class="feature-num">✓</div>
+      <div class="feature-body">
+        <h4>Unique <code>&lt;title&gt;</code> Tags</h4>
+        <p>Each page has a unique, keyword-rich title. Format: <em>"Page Name | Your Care Crew — Professional Nanny Placement"</em>. Max 60 characters.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">✓</div>
+      <div class="feature-body">
+        <h4>Meta Description</h4>
+        <p>Unique 150–160 character meta description per page, incorporating the primary keyword. Example for Home: <em>"Find a trusted, vetted nanny for your family. Your Care Crew specializes in professional nanny placement, house helpers, and elder care."</em></p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">✓</div>
+      <div class="feature-body">
+        <h4>Open Graph &amp; Twitter Card Tags</h4>
+        <p><code>og:title</code>, <code>og:description</code>, <code>og:image</code>, <code>og:url</code>, <code>og:type</code>, <code>twitter:card</code> on every page — essential for social sharing previews.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">✓</div>
+      <div class="feature-body">
+        <h4>Canonical URL</h4>
+        <p><code>&lt;link rel="canonical"&gt;</code> on every page to prevent duplicate content issues across HTTP/HTTPS or www/non-www variations.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">✓</div>
+      <div class="feature-body">
+        <h4>Semantic HTML5 Structure</h4>
+        <p><code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code> used correctly throughout. One <code>&lt;h1&gt;</code> per page, logical <code>h2</code>→<code>h3</code>→<code>h4</code> hierarchy.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">✓</div>
+      <div class="feature-body">
+        <h4>JSON-LD Structured Data</h4>
+        <p><code>LocalBusiness</code> schema on the homepage and Contact page (business name, address, phone, service types). <code>FAQPage</code> schema on the For Clients page. Helps Google display rich results.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">✓</div>
+      <div class="feature-body">
+        <h4><code>sitemap.xml</code></h4>
+        <p>XML sitemap listing all 6 pages with <code>&lt;lastmod&gt;</code>, <code>&lt;changefreq&gt;</code>, and <code>&lt;priority&gt;</code>. Placed at the root and referenced in <code>robots.txt</code>. Submitted to Google Search Console on launch.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">✓</div>
+      <div class="feature-body">
+        <h4><code>robots.txt</code></h4>
+        <p>Allows all crawlers on all pages. Points to the sitemap URL. Placed at the root of the GitHub Pages site.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">✓</div>
+      <div class="feature-body">
+        <h4>Image Alt Text</h4>
+        <p>Every <code>&lt;img&gt;</code> tag has a descriptive <code>alt</code> attribute. Portfolio photos use format: <em>"Maria — Your Care Crew verified nanny"</em>. Decorative images use <code>alt=""</code>.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">✓</div>
+      <div class="feature-body">
+        <h4>HTTPS (Automatic on GitHub Pages)</h4>
+        <p>GitHub Pages enforces HTTPS automatically — a positive Google ranking signal. Ensure "Enforce HTTPS" is checked in repo Settings → Pages.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3>Target Keywords (Nanny-First)</h3>
+  <div style="display:flex;flex-wrap:wrap;gap:8px;margin:16px 0;">
+    <span class="badge" style="background:#EEF2FF;color:#3B4EA6;padding:6px 14px;font-size:12px;border-radius:20px;">professional nanny placement</span>
+    <span class="badge" style="background:#EEF2FF;color:#3B4EA6;padding:6px 14px;font-size:12px;border-radius:20px;">trusted nanny service</span>
+    <span class="badge" style="background:#EEF2FF;color:#3B4EA6;padding:6px 14px;font-size:12px;border-radius:20px;">find a nanny near me</span>
+    <span class="badge" style="background:#EEF2FF;color:#3B4EA6;padding:6px 14px;font-size:12px;border-radius:20px;">vetted nanny agency</span>
+    <span class="badge" style="background:#EEF2FF;color:#3B4EA6;padding:6px 14px;font-size:12px;border-radius:20px;">nanny for hire</span>
+    <span class="badge" style="background:#EEF2FF;color:#3B4EA6;padding:6px 14px;font-size:12px;border-radius:20px;">house helper service</span>
+    <span class="badge" style="background:#EEF2FF;color:#3B4EA6;padding:6px 14px;font-size:12px;border-radius:20px;">elder care placement</span>
+    <span class="badge" style="background:#EEF2FF;color:#3B4EA6;padding:6px 14px;font-size:12px;border-radius:20px;">nanny background check</span>
+    <span class="badge" style="background:#EEF2FF;color:#3B4EA6;padding:6px 14px;font-size:12px;border-radius:20px;">Your Care Crew nanny</span>
+  </div>
+
+  <h3>Post-Launch SEO Actions</h3>
+  <p>
+    After first deployment: register in <strong>Google Search Console</strong> and submit the sitemap. Register in <strong>Google Business Profile</strong> for local search visibility. Monitor Core Web Vitals in Search Console to catch any performance issues early.
+  </p>
+</section>
+
+<!-- ══════════ 7. PORTFOLIO APPROVAL FLOW ══════════ -->
+<section class="section">
+  <div class="section-label">07 — Portfolio &amp; Testimonials</div>
+  <h2>Admin-Controlled Portfolio System</h2>
+  <p>
+    Portfolio cards are <strong>never auto-published</strong>. Every service provider goes through
+    a manual review before their profile appears on the website, ensuring quality and safety.
+  </p>
+
+  <div class="flow-steps">
+    <div class="flow-step">
+      <div class="step-bubble">📝</div>
+      <div class="step-title">Provider Applies</div>
+      <div class="step-desc">Submits form with photo &amp; ID</div>
+    </div>
+    <div class="flow-step">
+      <div class="step-bubble">📨</div>
+      <div class="step-title">Admin Receives</div>
+      <div class="step-desc">Email via Formspree with all data &amp; files</div>
+    </div>
+    <div class="flow-step">
+      <div class="step-bubble">🔍</div>
+      <div class="step-title">Admin Reviews</div>
+      <div class="step-desc">Verifies ID, checks photo quality</div>
+    </div>
+    <div class="flow-step">
+      <div class="step-bubble">✅</div>
+      <div class="step-title">Admin Approves</div>
+      <div class="step-desc">Adds card data to <code>providers.json</code></div>
+    </div>
+    <div class="flow-step">
+      <div class="step-bubble">🌐</div>
+      <div class="step-title">Card Published</div>
+      <div class="step-desc">First name, photo &amp; experience shown</div>
+    </div>
+  </div>
+
+  <h3>What is Publicly Shown on Portfolio Cards</h3>
+  <p>To protect privacy, only these fields are displayed on the public portfolio page:</p>
+  <ul style="margin-left:20px;color:var(--charcoal);font-size:14px;line-height:2;">
+    <li>First name only (e.g., "Maria")</li>
+    <li>Approved portfolio photo (face visible, professional)</li>
+    <li>Service category (Nanny / House Helper / Elder Care)</li>
+    <li>Age <em>or</em> years of experience (admin chooses which to show)</li>
+    <li>Optional: a short approved bio line (1 sentence)</li>
+    <li>Admin-assigned badges: "ID Verified", "Admin Approved"</li>
+  </ul>
+
+  <h3>Testimonials Section</h3>
+  <p>
+    Client testimonials are hardcoded by the admin after being collected via email or the
+    Contact form. Each testimonial shows: star rating (1–5), first name + city, and a quote
+    (max 120 words). A JavaScript carousel rotates them on the homepage.
+  </p>
+</section>
+
+<!-- ══════════ 6. TECH STACK ══════════ -->
+<section class="section">
+  <div class="section-label">08 — Technology Stack</div>
+  <h2>Tools &amp; Technologies</h2>
+  <p>
+    The entire site is <strong>100% static</strong> — HTML, CSS, and vanilla JavaScript only.
+    This makes it free to host on GitHub Pages with zero server costs and maximum reliability.
+  </p>
+  <div class="tech-grid">
+    <div class="tech-card">
+      <div class="tech-layer">Structure</div>
+      <div class="tech-name">HTML5</div>
+      <div class="tech-why">Semantic markup, SEO-friendly, accessible across all browsers.</div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-layer">Styling</div>
+      <div class="tech-name">CSS3 + Variables</div>
+      <div class="tech-why">Custom properties for the design system, Flexbox &amp; Grid layouts, CSS animations.</div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-layer">Interactivity</div>
+      <div class="tech-name">Vanilla JS (ES6+)</div>
+      <div class="tech-why">Carousel, scroll animations, mobile nav, form validation — no jQuery needed.</div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-layer">Fonts</div>
+      <div class="tech-name">Google Fonts</div>
+      <div class="tech-why">Playfair Display (headings) + Inter (body) — loaded from CDN.</div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-layer">Icons</div>
+      <div class="tech-name">Lucide / SVG Icons</div>
+      <div class="tech-why">Lightweight inline SVG icons — no icon font payload.</div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-layer">Forms</div>
+      <div class="tech-name">Formspree.io</div>
+      <div class="tech-why">Free form backend — handles file uploads, email notifications, spam filtering.</div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-layer">Portfolio Data</div>
+      <div class="tech-name">JSON Data File</div>
+      <div class="tech-why">providers.json holds approved card data; JS renders cards dynamically on page load.</div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-layer">Hosting</div>
+      <div class="tech-name">GitHub Pages</div>
+      <div class="tech-why">Free, reliable hosting — deploy straight from the main branch. Supports custom domains.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 7. DEPLOYMENT PLAN ══════════ -->
+<section class="section">
+  <div class="section-label">09 — Deployment</div>
+  <h2>GitHub &amp; GitHub Pages Setup</h2>
+  <div class="deploy-steps">
+    <div class="deploy-step">
+      <div class="deploy-num">1</div>
+      <div class="deploy-content">
+        <h4>Create GitHub Repository</h4>
+        <p>Create a new public repo named <code>yourcarecrew-website</code> (or your chosen domain name).</p>
+        <div class="code-block">git init<br/>git remote add origin https://github.com/YOUR_USERNAME/yourcarecrew-website.git</div>
+      </div>
+    </div>
+    <div class="deploy-step">
+      <div class="deploy-num">2</div>
+      <div class="deploy-content">
+        <h4>File Structure</h4>
+        <p>Flat file structure — all HTML pages at root, assets in sub-folders.</p>
+        <div class="code-block">
+/yourcarecrew-website<br/>
+├── index.html         ← Home<br/>
+├── portfolio.html     ← Portfolio &amp; Testimonials<br/>
+├── for-clients.html   ← For Clients + Contact Form<br/>
+├── join.html          ← Provider Registration<br/>
+├── about.html         ← About Us<br/>
+├── contact.html       ← Contact Us<br/>
+├── css/<br/>
+│   └── style.css<br/>
+├── js/<br/>
+│   ├── main.js<br/>
+│   └── portfolio.js<br/>
+├── data/<br/>
+│   └── providers.json ← Admin-managed portfolio data<br/>
+├── sitemap.xml        ← SEO: required from Day 1<br/>
+├── robots.txt         ← SEO: required from Day 1<br/>
+└── assets/<br/>
+    └── images/
+        </div>
+      </div>
+    </div>
+    <div class="deploy-step">
+      <div class="deploy-num">3</div>
+      <div class="deploy-content">
+        <h4>Push to GitHub &amp; Enable Pages</h4>
+        <p>Push code to <code>main</code> branch, then in repo Settings → Pages → Source → Deploy from branch → <code>main</code> / <code>/ (root)</code>.</p>
+        <div class="code-block">git add .<br/>git commit -m "Initial website launch"<br/>git push origin main</div>
+      </div>
+    </div>
+    <div class="deploy-step">
+      <div class="deploy-num">4</div>
+      <div class="deploy-content">
+        <h4>Live URL</h4>
+        <p>Site goes live at <code>https://YOUR_USERNAME.github.io/yourcarecrew-website/</code></p>
+      </div>
+    </div>
+    <div class="deploy-step">
+      <div class="deploy-num">5</div>
+      <div class="deploy-content">
+        <h4>Custom Domain (Optional)</h4>
+        <p>Add a <code>CNAME</code> file with your domain (e.g., <code>yourcarecrew.com</code>), update DNS at your registrar, enable HTTPS in GitHub Pages settings.</p>
+      </div>
+    </div>
+    <div class="deploy-step">
+      <div class="deploy-num">6</div>
+      <div class="deploy-content">
+        <h4>Ongoing Updates</h4>
+        <p>To add new portfolio cards, edit <code>data/providers.json</code>, commit and push — page updates within ~60 seconds.</p>
+        <div class="code-block">git add data/providers.json<br/>git commit -m "Add new provider: Maria"<br/>git push origin main</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 8. PROJECT TIMELINE ══════════ -->
+<section class="section">
+  <div class="section-label">10 — Build Timeline</div>
+  <h2>Suggested Development Phases</h2>
+  <div class="timeline">
+    <div class="phase">
+      <div class="phase-dot">P1</div>
+      <div class="phase-body">
+        <span class="phase-tag">Week 1</span>
+        <h4>Foundation, Mobile CSS &amp; SEO Infrastructure</h4>
+        <p>Set up GitHub repo and file structure. Write global mobile-first CSS (variables, typography, breakpoints, grid). Build responsive navigation (hamburger on mobile). Add <code>sitemap.xml</code>, <code>robots.txt</code>, and all SEO meta tag templates. First GitHub Pages deployment — site goes live with SEO fully in place.</p>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="phase-dot">P2</div>
+      <div class="phase-body">
+        <span class="phase-tag">Week 2</span>
+        <h4>Home Page &amp; About Page</h4>
+        <p>Hero section, service category cards, trust counters, testimonial preview carousel, and the full About Us page.</p>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="phase-dot">P3</div>
+      <div class="phase-body">
+        <span class="phase-tag">Week 3</span>
+        <h4>Portfolio &amp; Testimonials Page</h4>
+        <p>Dynamic card rendering from providers.json, category filter tabs, full testimonials section.</p>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="phase-dot">P4</div>
+      <div class="phase-body">
+        <span class="phase-tag">Week 4</span>
+        <h4>Forms &amp; Contact Pages</h4>
+        <p>Build and integrate both forms (client + provider), file upload fields, Formspree connection, form validation, success/error messages.</p>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="phase-dot">P5</div>
+      <div class="phase-body">
+        <span class="phase-tag">Week 5</span>
+        <h4>Polish, Testing &amp; Launch</h4>
+        <p>Cross-browser and multi-device testing (Chrome, Safari, Firefox; iOS &amp; Android). Performance audit (images, lazy loading, minification). Submit sitemap to Google Search Console. Register Google Business Profile. Custom domain setup and HTTPS verification.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /container -->
+
+<!-- ══════════ FOOTER ══════════ -->
+<div class="plan-footer">
+  <strong>Your Care Crew — Nanny &amp; Care Services Website Plan v1.0</strong> &nbsp;·&nbsp;
+  Prepared by Synapse Lab &nbsp;·&nbsp; May 2026 &nbsp;·&nbsp;
+  Specializing in professional nanny placement. All content subject to revision before development begins.
+</div>
+
+</body>
+</html>
