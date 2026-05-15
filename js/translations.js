@@ -21,7 +21,7 @@ const TRANSLATIONS = {
 
     /* --- HERO --- */
     hero_tag:             "Nanny Specialists",
-    hero_heading:         "Your Trusted Nanny & Care Service",
+    hero_heading:         "Your Trusted Care Service",
     hero_sub:             "We connect families with verified, compassionate CareCrew who make everyday life easier. From newborn care to elderly support, find the perfect match for your home.",
     hero_cta_primary:     "Find a CareCrew",
     hero_cta_secondary:   "Join as a CareCrew",
@@ -158,7 +158,7 @@ const TRANSLATIONS = {
     contact_form_title:   "Send Us a Message",
     contact_info_title:   "Contact Information",
     contact_address_label: "Address",
-    contact_address:      "123 Placeholder Street, Kolkata, West Bengal, India",
+    contact_address:      "66 Sisir Bhaduri Sarani, Near Hedua Park, Kolkata, West Bengal, 700 006",
     contact_phone_label:  "Phone",
     contact_phone:        "+91 98XXX-XXXXX",
     contact_email_label:  "Email",
@@ -174,6 +174,7 @@ const TRANSLATIONS = {
     footer_copyright:      "© 2026 Your CareCrew. All rights reserved.",
     footer_privacy:        "Privacy Policy",
     footer_terms:          "Terms of Service",
+    banner_service_area:   "📍 Currently serving Kolkata & surrounding regions — Howrah, Salt Lake, New Town, Barasat & more.",
   },
 
   /* =========================================================
@@ -211,7 +212,7 @@ const TRANSLATIONS = {
     test_home3:                    '"Excellent service. The team matched us with exactly the right Japa maid for our needs within 48 hours."',
     test_home3_author:             'Anita D.',
     test_home3_location:           'Salt Lake',
-    about_story2:                  'Since our founding in 2020, we have grown to serve hundreds of families across West Bengal\'s major cities. Every day, we refine our vetting process, expand our network, and deepen our commitment to quality, safety, and transparency — because the families and caregivers we serve deserve nothing less.',
+    about_story2:                  'Since our founding in 2025, we have grown to serve hundreds of families across West Bengal\'s major cities. Every day, we refine our vetting process, expand our network, and deepen our commitment to quality, safety, and transparency — because the families and caregivers we serve deserve nothing less.',
     about_stat_est:                'Est.',
     about_stat_families:           'Families Served',
     about_stat_services:           'Services Offered',
@@ -356,7 +357,7 @@ const TRANSLATIONS = {
 
     /* --- HERO --- */
     hero_tag:             "নার্সারি বিশেষজ্ঞ",
-    hero_heading:         "আপনার বিশ্বস্ত নানি ও কেয়ার সার্ভিস",
+    hero_heading:         "আপনার বিশ্বস্ত কেয়ার সার্ভিস",
     hero_sub:             "আমরা পরিবারগুলোকে যাচাইকৃত ও আন্তরিক CareCrew (সেবক কর্মী)-দের সঙ্গে সংযুক্ত করি, যারা আপনার দৈনন্দিন জীবনকে সহজ করে তোলে। নবজাতকের যত্ন থেকে বয়স্ক সহায়তা পর্যন্ত, আপনার পরিবারের জন্য সেরা CareCrew খুঁজে নিন।",
     hero_cta_primary:     "CareCrew খুঁজুন",
     hero_cta_secondary:   "সেবক কর্মী হিসেবে যোগ দিন",
@@ -493,7 +494,7 @@ const TRANSLATIONS = {
     contact_form_title:   "আমাদের একটি বার্তা পাঠান",
     contact_info_title:   "যোগাযোগের তথ্য",
     contact_address_label: "ঠিকানা",
-    contact_address:      "১২৩ প্লেসহোল্ডার স্ট্রিট, কলকাতা, পশ্চিমবঙ্গ, ভারত",
+    contact_address:      "৬৬ শিশির ভাদুরী সরণি, হেদুয়া পার্কের কাছে, কলকাতা, পশ্চিমবঙ্গ, ৭০০ ০০৬",
     contact_phone_label:  "ফোন",
     contact_phone:        "+৯১ ৯৮XXX-XXXXX",
     contact_email_label:  "ইমেইল",
@@ -509,6 +510,7 @@ const TRANSLATIONS = {
     footer_copyright:      "© ২০২৬ Your CareCrew। সর্বস্বত্ব সংরক্ষিত।",
     footer_privacy:        "গোপনীয়তা নীতি",
     footer_terms:          "সেবার শর্তাবলী",
+    banner_service_area:   "📍 বর্তমানে কলকাতা ও আশেপাশের অঞ্চলে সেবা প্রদান করা হচ্ছে — হাওড়া, সল্ট লেক, নিউ টাউন, বারাসাত ও আরও।",
   },
     label_our_story:               'আমাদের গল্প',
     label_how_started:             'আমরা কীভাবে শুরু করেছি',
@@ -542,7 +544,7 @@ const TRANSLATIONS = {
     test_home3:                    '"চমৎকার সেবা। দলটি ৪৮ ঘণ্টার মধ্যে আমাদের প্রয়োজনীয় জাপা মেড মিলিয়ে দিয়েছিল।"',
     test_home3_author:             'অনিতা ডি.',
     test_home3_location:           'সল্ট লেক',
-    about_story2:                  '২০২০ সালে প্রতিষ্ঠার পর থেকে আমরা পশ্চিমবঙ্গের প্রধান শহরগুলোতে শত শত পরিবারকে সেবা দিয়ে আসছি। প্রতিদিন আমরা আমাদের যাচাই প্রক্রিয়া উন্নত করি, নেটওয়ার্ক বিস্তার করি এবং মান, নিরাপত্তা ও স্বচ্ছতার প্রতি আমাদের প্রতিশ্রুতি গভীর করি।',
+    about_story2:                  '২০২৫ সালে প্রতিষ্ঠার পর থেকে আমরা পশ্চিমবঙ্গের প্রধান শহরগুলোতে পরিবারকে সেবা দিয়ে আসছি। প্রতিদিন আমরা আমাদের যাচাই প্রক্রিয়া উন্নত করি, নেটওয়ার্ক বিস্তার করি এবং মান, নিরাপত্তা ও স্বচ্ছতার প্রতি আমাদের প্রতিশ্রুতি গভীর করি।',
     about_stat_est:                'প্রতিষ্ঠিত',
     about_stat_families:           'পরিবার সেবিত',
     about_stat_services:           'ধরনের সেবা',
