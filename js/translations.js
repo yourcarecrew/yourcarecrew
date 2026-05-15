@@ -353,14 +353,14 @@ const TRANSLATIONS = {
     nav_clients:          "পরিবারের জন্য",
     nav_about:            "আমাদের সম্পর্কে",
     nav_contact:          "যোগাযোগ",
-    nav_join:             "সেবক কর্মী হিসেবে যোগ দিন",
+    nav_join:             "CareCrew হিসেবে যোগ দিন",
 
     /* --- HERO --- */
     hero_tag:             "নার্সারি বিশেষজ্ঞ",
     hero_heading:         "আপনার বিশ্বস্ত কেয়ার সার্ভিস",
     hero_sub:             "আমরা পরিবারগুলোকে যাচাইকৃত ও আন্তরিক CareCrew (সেবক কর্মী)-দের সঙ্গে সংযুক্ত করি, যারা আপনার দৈনন্দিন জীবনকে সহজ করে তোলে। নবজাতকের যত্ন থেকে বয়স্ক সহায়তা পর্যন্ত, আপনার পরিবারের জন্য সেরা CareCrew খুঁজে নিন।",
     hero_cta_primary:     "CareCrew খুঁজুন",
-    hero_cta_secondary:   "সেবক কর্মী হিসেবে যোগ দিন",
+    hero_cta_secondary:   "CareCrew হিসেবে যোগ দিন",
 
     /* --- STATS --- */
     stat_families:        "সন্তুষ্ট পরিবার",
