@@ -1,5 +1,5 @@
 /**
- * main.js — Your Care Crew
+ * main.js — Your CareCrew
  * Vanilla JS for all shared site behaviour.
  * Depends on translations.js being loaded first (defines window.TRANSLATIONS).
  */
@@ -336,7 +336,7 @@ function initLanguage() {
               errText.textContent = err.message || 'Something went wrong. Please try again.';
             }
           }
-          console.error('[Your Care Crew] Form error:', err);
+          console.error('[Your CareCrew] Form error:', err);
         });
       });
     });

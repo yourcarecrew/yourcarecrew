@@ -1,5 +1,5 @@
 /* ============================================================
-   Your Care Crew — Bilingual Translation Object
+   Your CareCrew — Bilingual Translation Object
    Supported languages: en (English), bn (Bengali / Bangla)
    ============================================================ */
 
@@ -11,7 +11,7 @@ const TRANSLATIONS = {
   en: {
 
     /* --- NAV --- */
-    brand_name:           "Your Care Crew",
+    brand_name:           "Your CareCrew",
     nav_home:             "Home",
     nav_portfolio:        "CareCrew & Testimonials",
     nav_clients:          "For Families",
@@ -75,13 +75,13 @@ const TRANSLATIONS = {
 
     /* --- TESTIMONIALS --- */
     testimonials_title:   "What Families Say",
-    testimonials_sub:     "Real experiences from real families who found their perfect CareCrew through Your Care Crew.",
+    testimonials_sub:     "Real experiences from real families who found their perfect CareCrew through Your CareCrew.",
     test_title:           "Client Testimonials",
     test_sub:             "Hear directly from the families and CareCrew in our community.",
 
     /* --- CTA --- */
     cta_title:            "Ready to Find Your Perfect CareCrew?",
-    cta_sub:              "Join hundreds of families who trust Your Care Crew. Verified carers, simple process, peace of mind.",
+    cta_sub:              "Join hundreds of families who trust Your CareCrew. Verified carers, simple process, peace of mind.",
     cta_btn:              "Find a CareCrew Today",
     cta_join:             "Are you a CareCrew?",
     cta_join_link:        "Join as a CareCrew →",
@@ -144,10 +144,10 @@ const TRANSLATIONS = {
     join_submit:          "Submit Application",
 
     /* --- ABOUT --- */
-    about_title:          "About Your Care Crew",
+    about_title:          "About Your CareCrew",
     about_sub:            "We believe every family deserves reliable, trustworthy care. Our mission is to make that care accessible and easy to find.",
     about_story_title:    "Our Story",
-    about_story:          "Your Care Crew was founded by a small team who experienced firsthand how difficult it can be to find dependable, vetted CareCrew in West Bengal, India. We built this platform to bridge that gap — making it easy for families to connect with skilled, verified CareCrew and for CareCrew to find meaningful, well-compensated work.",
+    about_story:          "Your CareCrew was founded by a small team who experienced firsthand how difficult it can be to find dependable, vetted CareCrew in West Bengal, India. We built this platform to bridge that gap — making it easy for families to connect with skilled, verified CareCrew and for CareCrew to find meaningful, well-compensated work.",
     about_mission_title:  "Our Mission",
     about_mission:        "To create a trusted ecosystem where families can find compassionate, qualified care and CareCrew can build dignified, rewarding careers — all within a transparent, safe, and easy-to-use platform.",
     about_values_title:   "Our Values",
@@ -171,7 +171,7 @@ const TRANSLATIONS = {
     footer_services_title: "Services",
     footer_company_title:  "Company",
     footer_contact_title:  "Contact",
-    footer_copyright:      "© 2026 Your Care Crew. All rights reserved.",
+    footer_copyright:      "© 2026 Your CareCrew. All rights reserved.",
     footer_privacy:        "Privacy Policy",
     footer_terms:          "Terms of Service",
   },
@@ -202,7 +202,7 @@ const TRANSLATIONS = {
     hero_li2:                      'Admin Approved Profiles Only',
     hero_li3:                      'Matched Within 48 Hours',
     service_popular:               'Most Popular',
-    test_home1:                    '"Finding a great nanny through Your Care Crew was the best decision we made. She\'s wonderful with our daughter and always reliable."',
+    test_home1:                    '"Finding a great nanny through Your CareCrew was the best decision we made. She\'s wonderful with our daughter and always reliable."',
     test_home1_author:             'Sunita B.',
     test_home1_location:           'Kolkata',
     test_home2:                    '"The verification process gave us real peace of mind. Our nanny has been with us for 2 years now."',
@@ -231,7 +231,7 @@ const TRANSLATIONS = {
     value3_desc:                   'We understand that inviting someone into your home is a significant decision. We take that seriously.',
     value4_title:                  'Transparency',
     value4_desc:                   'No hidden fees, no surprises. What you see is what you get.',
-    about_why_title:               'Why Choose Your Care Crew',
+    about_why_title:               'Why Choose Your CareCrew',
     about_why_sub:                 'Six reasons families across West Bengal, India trust us to find the right care for their loved ones.',
     why1_title:                    'ID Verified CareCrew',
     why1_desc:                     'Every CareCrew\'s identity is checked against official national ID documents before they join our network.',
@@ -288,13 +288,13 @@ const TRANSLATIONS = {
     port_cta_title:                'Couldn\'t find what you need?',
     port_cta_sub:                  'Contact us directly and we\'ll match you with the perfect CareCrew.',
     port_cta_btn:                  'Find a CareCrew',
-    port_test1:                    '"Your Care Crew found us a wonderful nanny in just 3 days. The whole process was smooth and professional."',
+    port_test1:                    '"Your CareCrew found us a wonderful nanny in just 3 days. The whole process was smooth and professional."',
     port_test1_author:             'Sunita R.',
     port_test1_location:           'Kolkata',
     port_test2:                    '"We had concerns about bringing someone new into our home. The ID verification and admin approval process gave us so much confidence."',
     port_test2_author:             'Debashis M.',
     port_test2_location:           'Salt Lake',
-    port_test3:                    '"Our Japa maid was incredibly experienced and caring. Highly recommend Your Care Crew for any care needs."',
+    port_test3:                    '"Our Japa maid was incredibly experienced and caring. Highly recommend Your CareCrew for any care needs."',
     port_test3_author:             'Riya C.',
     port_test3_location:           'Howrah',
     port_test4:                    '"The bilingual support was a great help for my elderly parents. Our carer speaks both English and Bengali fluently."',
@@ -333,7 +333,7 @@ const TRANSLATIONS = {
     label_your_benefits:           'Your Benefits',
     label_apply_now:               'Apply Now',
     label_journey_ahead:           'The Journey Ahead',
-    join_why_title:                'Why Join Your Care Crew?',
+    join_why_title:                'Why Join Your CareCrew?',
     join_why_sub:                  'We give every CareCrew the tools, visibility, and support to build a successful, rewarding career.',
     join_benefit1_desc:            'Your approved portfolio card is seen by hundreds of families actively seeking care professionals. A strong profile means more opportunities and better placements.',
     join_benefit2_desc:            'We connect you with families who need reliable, long-term care arrangements — giving you consistent, meaningful work rather than one-off gigs.',
@@ -346,7 +346,7 @@ const TRANSLATIONS = {
   bn: {
 
     /* --- NAV --- */
-    brand_name:           "Your Care Crew",
+    brand_name:           "Your CareCrew",
     nav_home:             "হোম",
     nav_portfolio:        "CareCrew (সেবক কর্মী) ও প্রশংসাপত্র",
     nav_clients:          "পরিবারের জন্য",
@@ -410,13 +410,13 @@ const TRANSLATIONS = {
 
     /* --- TESTIMONIALS --- */
     testimonials_title:   "পরিবারগুলো কী বলছেন",
-    testimonials_sub:     "Your Care Crew-এর মাধ্যমে তাদের আদর্শ CareCrew (সেবক কর্মী) খুঁজে পাওয়া বাস্তব পরিবারগুলোর অভিজ্ঞতা।",
+    testimonials_sub:     "Your CareCrew-এর মাধ্যমে তাদের আদর্শ CareCrew (সেবক কর্মী) খুঁজে পাওয়া বাস্তব পরিবারগুলোর অভিজ্ঞতা।",
     test_title:           "গ্রাহকদের মতামত",
     test_sub:             "আমাদের কমিউনিটির পরিবার ও CareCrew (সেবক কর্মী)-দের কাছ থেকে সরাসরি শুনুন।",
 
     /* --- CTA --- */
     cta_title:            "আপনার নিখুঁত CareCrew (সেবক কর্মী) খুঁজে পেতে প্রস্তুত?",
-    cta_sub:              "শত শত পরিবারের বিশ্বাসের জায়গা Your Care Crew। যাচাইকৃত CareCrew (সেবক কর্মী), সহজ প্রক্রিয়া, মানসিক শান্তি।",
+    cta_sub:              "শত শত পরিবারের বিশ্বাসের জায়গা Your CareCrew। যাচাইকৃত CareCrew (সেবক কর্মী), সহজ প্রক্রিয়া, মানসিক শান্তি।",
     cta_btn:              "আজই CareCrew (সেবক কর্মী) খুঁজুন",
     cta_join:             "আপনি কি একজন CareCrew (সেবক কর্মী)?",
     cta_join_link:        "CareCrew (সেবক কর্মী) হিসেবে যোগ দিন →",
@@ -479,10 +479,10 @@ const TRANSLATIONS = {
     join_submit:          "আবেদন জমা দিন",
 
     /* --- ABOUT --- */
-    about_title:          "Your Care Crew সম্পর্কে",
+    about_title:          "Your CareCrew সম্পর্কে",
     about_sub:            "আমরা বিশ্বাস করি প্রতিটি পরিবার নির্ভরযোগ্য ও বিশ্বস্ত কেয়ার পাওয়ার অধিকারী। সেই কেয়ারকে সহজলভ্য করাই আমাদের লক্ষ্য।",
     about_story_title:    "আমাদের গল্প",
-    about_story:          "Your Care Crew প্রতিষ্ঠিত হয়েছিল একটি ছোট দলের হাতে যারা নিজেরাই অনুভব করেছিলেন পশ্চিমবঙ্গে নির্ভরযোগ্য ও যাচাইকৃত CareCrew (সেবক কর্মী) খোঁজা কতটা কঠিন। সেই ঘাটতি পূরণ করতেই আমরা এই প্ল্যাটফর্ম তৈরি করেছি — যাতে পরিবারগুলো সহজেই দক্ষ ও যাচাইকৃত CareCrew (সেবক কর্মী)-দের সাথে যোগাযোগ করতে পারে এবং CareCrew (সেবক কর্মী) হিসেবে অর্থবহ ও উপযুক্ত পারিশ্রমিকের কাজ খুঁজে পেতে পারেন।",
+    about_story:          "Your CareCrew প্রতিষ্ঠিত হয়েছিল একটি ছোট দলের হাতে যারা নিজেরাই অনুভব করেছিলেন পশ্চিমবঙ্গে নির্ভরযোগ্য ও যাচাইকৃত CareCrew (সেবক কর্মী) খোঁজা কতটা কঠিন। সেই ঘাটতি পূরণ করতেই আমরা এই প্ল্যাটফর্ম তৈরি করেছি — যাতে পরিবারগুলো সহজেই দক্ষ ও যাচাইকৃত CareCrew (সেবক কর্মী)-দের সাথে যোগাযোগ করতে পারে এবং CareCrew (সেবক কর্মী) হিসেবে অর্থবহ ও উপযুক্ত পারিশ্রমিকের কাজ খুঁজে পেতে পারেন।",
     about_mission_title:  "আমাদের লক্ষ্য",
     about_mission:        "একটি বিশ্বস্ত পরিবেশ তৈরি করা যেখানে পরিবারগুলো আন্তরিক ও যোগ্য কেয়ার পেতে পারে এবং CareCrew (সেবক কর্মী)-রা মর্যাদাপূর্ণ ও ফলপ্রসূ ক্যারিয়ার গড়তে পারেন — সবকিছু একটি স্বচ্ছ, নিরাপদ ও সহজে ব্যবহারযোগ্য প্ল্যাটফর্মের মাধ্যমে।",
     about_values_title:   "আমাদের মূল্যবোধ",
@@ -506,7 +506,7 @@ const TRANSLATIONS = {
     footer_services_title: "সেবাসমূহ",
     footer_company_title:  "কোম্পানি",
     footer_contact_title:  "যোগাযোগ",
-    footer_copyright:      "© ২০২৬ Your Care Crew। সর্বস্বত্ব সংরক্ষিত।",
+    footer_copyright:      "© ২০২৬ Your CareCrew। সর্বস্বত্ব সংরক্ষিত।",
     footer_privacy:        "গোপনীয়তা নীতি",
     footer_terms:          "সেবার শর্তাবলী",
   },
@@ -533,7 +533,7 @@ const TRANSLATIONS = {
     hero_li2:                      'শুধু অ্যাডমিন অনুমোদিত প্রোফাইল',
     hero_li3:                      '৪৮ ঘণ্টার মধ্যে মিলিয়ে দেওয়া হয়',
     service_popular:               'সবচেয়ে জনপ্রিয়',
-    test_home1:                    '"Your Care Crew-এর মাধ্যমে নিউনি পাওয়াটা আমাদের সেরা সিদ্ধান্ত ছিল। তিনি আমার মেয়ের সাথে অসাধারণ এবং সবসময় নির্ভরযোগ্য।"',
+    test_home1:                    '"Your CareCrew-এর মাধ্যমে নিউনি পাওয়াটা আমাদের সেরা সিদ্ধান্ত ছিল। তিনি আমার মেয়ের সাথে অসাধারণ এবং সবসময় নির্ভরযোগ্য।"',
     test_home1_author:             'সুনীতা বি.',
     test_home1_location:           'কলকাতা',
     test_home2:                    '"যাচাইকরণ প্রক্রিয়া আমাদের সত্যিকারের মানসিক শান্তি দিয়েছিল। আমাদের নিউনি ২ বছর ধরে আমাদের সাথে আছেন।"',
@@ -562,7 +562,7 @@ const TRANSLATIONS = {
     value3_desc:                   'আমরা বুঝি যে কাউকে আপনার বাড়িতে আমন্ত্রণ জানানো একটি গুরুত্বপূর্ণ সিদ্ধান্ত। আমরা এটি গুরুত্বের সাথে নিই।',
     value4_title:                  'স্বচ্ছতা',
     value4_desc:                   'কোনো লুকানো ফি নেই, কোনো চমক নেই। আপনি যা দেখেন তাই পান।',
-    about_why_title:               'কেন Your Care Crew বেছে নেবেন',
+    about_why_title:               'কেন Your CareCrew বেছে নেবেন',
     about_why_sub:                 'পশ্চিমবঙ্গের পরিবারগুলো কেন আমাদের উপর আস্থা রাখে তার ছয়টি কারণ।',
     why1_title:                    'আইডি যাচাইকৃত CareCrew (সেবক কর্মী)',
     why1_desc:                     'নেটওয়ার্কে যোগ দেওয়ার আগে প্রতিটি CareCrew (সেবক কর্মী)-এর পরিচয় সরকারি আইডি দলিলের বিপরীতে যাচাই করা হয়।',
@@ -619,13 +619,13 @@ const TRANSLATIONS = {
     port_cta_title:                'আপনার প্রয়োজনীয় কিছু খুঁজে পাননি?',
     port_cta_sub:                  'সরাসরি আমাদের সাথে যোগাযোগ করুন এবং আমরা আপনাকে নিখুঁত CareCrew (সেবক কর্মী)-এর সাথে মিলিয়ে দেব।',
     port_cta_btn:                  'CareCrew (সেবক কর্মী) খুঁজুন',
-    port_test1:                    '"Your Care Crew মাত্র ৩ দিনে আমাদের একজন চমৎকার নিউনি খুঁজে দিয়েছে। পুরো প্রক্রিয়াটি ছিল মসৃণ ও পেশাদার।"',
+    port_test1:                    '"Your CareCrew মাত্র ৩ দিনে আমাদের একজন চমৎকার নিউনি খুঁজে দিয়েছে। পুরো প্রক্রিয়াটি ছিল মসৃণ ও পেশাদার।"',
     port_test1_author:             'সুনীতা আর.',
     port_test1_location:           'কলকাতা',
     port_test2:                    '"নতুন কাউকে আমাদের বাড়িতে আনা নিয়ে উদ্বেগ ছিল। আইডি যাচাইকরণ ও অ্যাডমিন অনুমোদন প্রক্রিয়া আমাদের অনেক আত্মবিশ্বাস দিয়েছে।"',
     port_test2_author:             'দেবাশিস এম.',
     port_test2_location:           'সল্ট লেক',
-    port_test3:                    '"আমাদের জাপা মেড অসাধারণ অভিজ্ঞ এবং যত্নশীল ছিলেন। যেকোনো যত্নের প্রয়োজনে Your Care Crew-কে সুপারিশ করি।"',
+    port_test3:                    '"আমাদের জাপা মেড অসাধারণ অভিজ্ঞ এবং যত্নশীল ছিলেন। যেকোনো যত্নের প্রয়োজনে Your CareCrew-কে সুপারিশ করি।"',
     port_test3_author:             'রিয়া সি.',
     port_test3_location:           'হাওড়া',
     port_test4:                    '"দ্বিভাষিক সহায়তা আমার বয়স্ক বাবা-মায়ের জন্য অনেক সাহায্য করেছে। আমাদের কেয়ারার বাংলা ও ইংরেজি উভয়ই সাবলীলভাবে বলেন।"',
@@ -664,7 +664,7 @@ const TRANSLATIONS = {
     label_your_benefits:           'আপনার সুবিধা',
     label_apply_now:               'এখনই আবেদন করুন',
     label_journey_ahead:           'সামনের পথ',
-    join_why_title:                'Your Care Crew-এ কেন CareCrew (সেবক কর্মী) হিসেবে যোগ দেবেন?',
+    join_why_title:                'Your CareCrew-এ কেন CareCrew (সেবক কর্মী) হিসেবে যোগ দেবেন?',
     join_why_sub:                  'আমরা প্রতিটি CareCrew (সেবক কর্মী)-কে একটি সফল ও পুরস্কৃত ক্যারিয়ার গড়তে টুলস, দৃশ্যমানতা ও সহায়তা প্রদান করি।',
     join_benefit1_desc:            'আপনার অনুমোদিত পোর্টফোলিও কার্ড শত শত পরিবার দেখে যারা সক্রিয়ভাবে পেশাদার খুঁজছেন। শক্তিশালী প্রোফাইল মানে আরও বেশি সুযোগ।',
     join_benefit2_desc:            'আমরা আপনাকে নির্ভরযোগ্য, দীর্ঘমেয়াদী সেবার প্রয়োজন এমন পরিবারের সাথে সংযুক্ত করি — সামঞ্জস্যপূর্ণ ও অর্থবহ কাজ দেয়।',
